@@ -119,3 +119,6 @@ select {
 
 /* UTILITY CLASSES */
 
+.text-primary-400 {
+  color: var()
+}
