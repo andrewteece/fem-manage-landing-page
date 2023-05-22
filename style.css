@@ -5,8 +5,21 @@
   --clr-primary-400: hsl(228, 39%, 23%);
 
   --clr-neutral-100: hsl(0, 0%, 98%);
-  --clr-netural-300: hsl(227, 12%, 61%);
+  --clr-neutral-300: hsl(227, 12%, 61%);
   --clr-neutral-900: hsl(233, 12%, 13%);
+
+  --ff-primary: 'Be Vietnam Pro', sans-serif;
+
+  --fw-regular: 400
+  --fw-semi: 500;
+  --fw-bold: 700;
+
+  --fs-300: .875rem;  /* 14px */
+  --fs-400: 1rem;
+  --fw-500: 1.875rem;
+  --fw-700: 2.5rem;
+
+
 }
 
 
