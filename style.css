@@ -1,6 +1,6 @@
 :root {
   --clr-accent-400: hsl(12, 88%, 59%);
-  --clr-accent-100: hsl(13, 100%, 96%)
+  --clr-accent-100: hsl(13, 100%, 96%) ;
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
@@ -14,6 +14,7 @@
   --fw-semi: 500;
   --fw-bold: 700;
 
+  --fs-100: .8125rem; /* 13px */
   --fs-200: .875rem;  /* 14px */
   --fs-300: .9375rem; /* 15px */
   --fs-400: 1rem; /* 16px */
@@ -96,4 +97,24 @@ svg {
 }
 
 /* UTILITY CLASSES */
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
 
