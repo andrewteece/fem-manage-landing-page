@@ -237,7 +237,7 @@ body {
   color: var(--clr-primary-400);
 }
 
-/* COMPONENT STYLES */
+/* COMPONENT(button) STYLES */
 
 .button {
   border: 0;
@@ -273,17 +273,40 @@ body {
 
 /* NAVIGATION */
 
-.primary-header {
+.primary__header {
   margin-top: var(--size-700);
 }
 
-.nav-toggle {
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  padding: .5em;
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav-toggle .icon-close {
+.nav-toggle {
   display: none;
 }
+
+@media (max-width: 50em) {
+  .primary__navigation {
+    display: none;
+  }
+
+  .primary__navigation[data-visible] {
+    display: block;
+    position: fixed;
+  }
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: .5em;
+  }
+  
+  .nav-toggle .icon-close {
+    display: none;
+  }
+}
+
+
