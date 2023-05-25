@@ -16,21 +16,48 @@
   <body>
     <header class="primary__header">
       <div class="container">
-        <a href="#"><img src="images/logo.svg" alt="our manage logo" /></a>
-        <nav class="primary__navigation">
-          <ul role="list" class="nav-list" aria-label="primary__navigation">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button type="button" class="button">Get Started</button>
+        <div class="nav-wrapper">
+          <a href="#"><img src="images/logo.svg" alt="our manage logo" /></a>
+          <button
+            class="nav-toggle"
+            aria-controls="primary-navigation"
+            type="button"
+            aria-expanded="false"
+          >
+            <img
+              class="icon-hamburger"
+              src="images/icon-hamburger.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="icon-close"
+              src="images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary__navigation">
+            <ul
+              role="list"
+              class="nav-list"
+              aria-label="primary__navigation"
+              id="primary-navigation"
+            >
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="button">Get Started</button>
+        </div>
       </div>
     </header>
     <main>
-      <section>
+      <section class="padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div>
@@ -50,7 +77,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div>
@@ -98,13 +125,13 @@
         </div>
       </section>
 
-      <section class="carousel">
-        <h2 class="fs-secondary-heading">What they've said</h2>
+      <section class="carousel | padding-block-700">
+        <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
         <!-- Carousel here-->
         <button class="button" type="button">Get Started</button>
       </section>
 
-      <section class="cta | bg-accent-400 text-neutral-100">
+      <section class="cta | padding-block-700 bg-accent-400 text-neutral-100">
         <div class="container">
           <div class="even-columns">
             <div>
@@ -122,7 +149,7 @@
       </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100">
+    <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
       <div class="container">
         <div class="even-columns">
           <div>
@@ -150,7 +177,7 @@
           </div>
           <div>
             <form action="">
-              <input type="email">
+              <input type="email" />
               <button type="button" class="button">Go</button>
             </form>
             <p>Copyright 2023. All Rights Reserved</p>
