@@ -206,7 +206,7 @@ body {
 
 .nav-list a:hover,
 .nav-list a:focus {
-  color: var(--clr-accent-100);
+  color: var(--clr-accent-400);
 }
 
 @media (max-width: 50em) {
