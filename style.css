@@ -108,7 +108,6 @@ svg {
   }
 }
 
-
 /* GENERAL STYLES */
 
 body {
@@ -163,7 +162,6 @@ p[data-width="wide"] {
   background-color: var(--clr-accent-100);
   color: var(--clr-accent-300);
 }
-
 
 /* NAVIGATION */
 
@@ -239,8 +237,6 @@ p[data-width="wide"] {
     text-decoration: none;
     color: var(--clr-accent-400);
   }
-  
-
 
   .primary__navigation[data-visible] {
     display: block;
@@ -254,9 +250,9 @@ p[data-width="wide"] {
     cursor: pointer;
     background: transparent;
     border: 0;
-    padding: .5em;
+    padding: 0.5em;
   }
-  
+
   .nav-toggle .icon-close {
     display: none;
   }
@@ -271,7 +267,7 @@ p[data-width="wide"] {
 .primary-footer-wrapper {
   display: grid;
   gap: var(--size-700);
-  grid-template-areas: 
+  grid-template-areas:
     "form"
     "nav"
     "logo-social";
@@ -303,18 +299,16 @@ p[data-width="wide"] {
   justify-content: center;
 }
 
-input:where([type="text"], [type="email"],  ) {
+input:where([type="text"], [type="email"], ) {
   border-radius: 100vw;
   border: 0;
   outline: none;
   padding: var(--size-300) var(--size-500);
 }
 
-
 @media (min-width: 50em) {
   .primary-footer-wrapper {
-    grid-template-areas: 
-      "logo-social nav form";
+    grid-template-areas: "logo-social nav form";
   }
 
   .primary-footer-logo-social {
@@ -330,11 +324,7 @@ input:where([type="text"], [type="email"],  ) {
   }
 }
 
-
-
-
 /* FOOTER NAVIGATION */
-
 
 .footer-nav {
   columns: 2;
@@ -375,9 +365,6 @@ input:where([type="text"], [type="email"],  ) {
   }
 }
 
-
-
-
 /* CTA */
 
 .cta {
@@ -397,12 +384,79 @@ input:where([type="text"], [type="email"],  ) {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image:  
-    url(images/bg-tablet-pattern.svg),
+  background-image: url(images/bg-tablet-pattern.svg),
     url(images/bg-tablet-pattern.svg);
   background-position: -10rem -5rem, 80rem -40rem;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   opacity: 0.1;
+}
+
+/* NUMBERED COLUMN */
+
+.numbered-items {
+  counter-reset: count;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.numbered-items li {
+  counter-increment: count;
+}
+
+.numbered-items div {
+  display: grid;
+  position: relative;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: var(--size-300);
+}
+
+.numbered-items-title {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  line-height: 1;
+}
+
+.numbered-items-body {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 30em) {
+  .numbered-items-body {
+    grid-column: 2 / -1;
+  }
+}
+
+.numbered-items div::before,
+.numbered-items div::after {
+  height: var(--fs-700);
+}
+
+.numbered-items div::before {
+  content: "0" counter(count);
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  padding: 0 var(--size-500);
+  border-radius: 100vw;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+@media (max-width: 30em) {
+  .numbered-items div::after {
+    --bg: var(--clr-accent-100);
+    content: "";
+    display: block;
+    z-index: -1;
+    border-radius: 100vw 0 0 100vw;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    box-shadow: 5em 0 0 var(--bg);
+    background: var(--bg);
+  }
 }
 
 /* UTILITY CLASSES */
@@ -457,6 +511,23 @@ input:where([type="text"], [type="email"],  ) {
 .flow > * + * {
   margin-top: var(--flow-spacer, 3em);
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  margin-inline: auto;
+}
+
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+  .text-center-sm-only p {
+    margin-inline: auto;
+  }
+}  
 
 .text-primary-400 {
   color: var(--clr-primary-400);
@@ -544,6 +615,10 @@ input:where([type="text"], [type="email"],  ) {
   padding-block: var(--size-900);
 }
 
+.margin-bottom-700 {
+  margin-block-end: var(--size-700);
+}
+
 .display-sm-none {
   display: none;
 }
@@ -553,5 +628,3 @@ input:where([type="text"], [type="email"],  ) {
     display: inline-flex;
   }
 }
-
-
