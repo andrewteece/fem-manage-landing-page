@@ -510,12 +510,14 @@ input:where([type="text"], [type="email"], ) {
   top: calc(var(--size-800) / 2);
   margin-inline: auto;
 }
+
 .a11y-slider-dots {
   display: flex;
   justify-content: center;
   margin-block: var(--size-500);
   gap: var(--size-300);
 }
+
 .a11y-slider-dots li {
   display: block;
   width: 12px;
