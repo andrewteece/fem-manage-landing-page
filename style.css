@@ -71,7 +71,8 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -578,6 +579,28 @@ input:where([type="text"], [type="email"], ) {
 @media (min-width: 47em) {
   .bg-graphic::before {
     width: 35%;
+  }
+}
+
+.bg-graphic-left {
+  position: relative;
+}
+
+.bg-graphic-left:before {
+  content: url(images/bg-tablet-pattern.svg);
+  position: absolute;
+  z-index: -1;
+  left: 67%;
+  bottom: 90%;
+  width: 6.25rem;
+}
+
+@media (min-width: 47em) {
+  .bg-graphic-left:before {
+    z-index: -1;
+    left: -550px;
+    top: 40%;
+    width: 6.25rem;
   }
 }
 
