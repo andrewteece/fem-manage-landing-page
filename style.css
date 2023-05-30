@@ -119,7 +119,7 @@ body {
 }
 
 p:not([class]) {
-  opacity: 0.6;
+  opacity: 0.4;
   max-width: 34ch;
 }
 
@@ -198,7 +198,7 @@ p[data-width="wide"] {
 
 .nav-list a:hover,
 .nav-list a:focus {
-  color: var(--clr-accent-400);
+  color: var(--clr-neutral-300);
 }
 
 @media (max-width: 47em) {
@@ -283,6 +283,7 @@ p[data-width="wide"] {
   display: grid;
   gap: var(--size-700);
   justify-content: center;
+  align-items: start;
   grid-template-areas:
     "form"
     "nav"
@@ -307,17 +308,9 @@ p[data-width="wide"] {
   text-align: center;
 }
 
-/* .primary-footer-logo-social {
-  grid-area: logo-social;
-
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: var(--size-700);
-} */
-
 .primary-footer-nav {
   grid-area: nav;
+  margin-inline: auto;
 }
 
 .primary-footer-form {
@@ -338,18 +331,17 @@ input:where([type="text"], [type="email"], ) {
   border: 0;
   outline: none;
   padding: var(--size-300) var(--size-500);
+  max-width: 100%;
+  width: 15rem;
 }
 
 @media (min-width: 47em) {
   .primary-footer-wrapper {
-    grid-template-areas: "logo-social nav form";
-  }
-
-  .primary-footer-logo-social {
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--size-700);
-  }
+    grid-template-areas: 
+      'logo nav form'
+      'social nav copyright';
+      grid-template-columns: auto 1fr auto;
+}
 }
 
 @media (min-width: 47em) {
@@ -389,11 +381,20 @@ input:where([type="text"], [type="email"], ) {
   fill: var(--clr-neutral-100);
 }
 
+@media (min-width: 47em) {
+  .social-icon {
+    width: var(--size-400);
+  }
+}
+
 .social-list a:is(:hover, :focus) .social-icon {
   fill: var(--clr-accent-400);
 }
 
 @media (min-width: 47em) {
+  .social-list {
+    gap: var(--size-300);
+  }
   .social-icon {
     width: var(--size-500);
   }
@@ -453,6 +454,7 @@ input:where([type="text"], [type="email"], ) {
 
 .numbered-items-body {
   grid-column: 1 / -1;
+  opacity: 0.4;
 }
 
 @media (min-width: 30em) {
